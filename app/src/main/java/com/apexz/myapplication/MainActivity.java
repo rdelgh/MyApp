@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.apexz.myapplication.utils.myTextUtils;
 
 public class MainActivity extends AppCompatActivity {
 //TODO complete this project
@@ -11,6 +14,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        displayTextView();
+
+    }
+
+    private void displayTextView() {
+        myTextUtils tu = new myTextUtils();
+        TextView tv = (TextView) findViewById(R.id.myTextView);
+        tv.setText(tu.getValue());
     }
 
     @Override
